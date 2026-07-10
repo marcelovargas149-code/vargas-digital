@@ -52,7 +52,7 @@
   --chart-3: #0052CC;
   --chart-4: #003D99;
   --chart-5: #002966;
-  --radius: 0.5rem;
+  --radius: 0.75rem;
   --background: #FFFFFF;
   --foreground: #1A1A1A;
   --card: #FFFFFF;
@@ -86,24 +86,16 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif !important;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.1;
     @apply tracking-tight;
   }
-  h1 {
-    @apply text-5xl md:text-6xl font-bold mb-6;
-  }
-  h2 {
-    @apply text-4xl font-bold mb-8;
-  }
-  h3 {
-    @apply text-2xl font-semibold mb-4;
-  }
   section {
-    @apply py-20 md:py-32;
+    @apply py-24 md:py-40;
   }
 }
 
