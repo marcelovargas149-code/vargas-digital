@@ -43,69 +43,69 @@
 }
 
 :root {
-  --primary: #1F2937; /* Gris Carbón */
+  --primary: #0066FF; /* Azul Eléctrico Moderno */
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #1F2937;
+  --sidebar-primary: #0066FF;
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #1F2937;
-  --chart-2: #EAB308; /* Dorado Champagne */
-  --chart-3: #374151;
-  --chart-4: #4B5563;
-  --chart-5: #6B7280;
-  --radius: 0.5rem;
+  --chart-1: #0066FF;
+  --chart-2: #3B82F6;
+  --chart-3: #60A5FA;
+  --chart-4: #93C5FD;
+  --chart-5: #BFDBFE;
+  --radius: 0.75rem; /* Bordes más redondeados y modernos */
   --background: #FFFFFF;
-  --foreground: #111827;
+  --foreground: #0F172A; /* Azul grisáceo muy oscuro para texto, no negro puro */
   --card: #FFFFFF;
-  --card-foreground: #111827;
+  --card-foreground: #0F172A;
   --popover: #FFFFFF;
-  --popover-foreground: #111827;
-  --secondary: #F3F4F6;
-  --secondary-foreground: #1F2937;
-  --muted: #F9FAFB;
-  --muted-foreground: #6B7280;
-  --accent: #EAB308; /* Dorado para acentos */
-  --accent-foreground: #1F2937;
-  --destructive: #DC2626;
+  --popover-foreground: #0F172A;
+  --secondary: #F8FAFC; /* Gris azulado muy suave */
+  --secondary-foreground: #0066FF;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #0066FF;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #E5E7EB;
-  --input: #F3F4F6;
-  --ring: #EAB308;
+  --border: #E2E8F0;
+  --input: #F1F5F9;
+  --ring: #0066FF;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #111827;
-  --sidebar-accent: #F3F4F6;
-  --sidebar-accent-foreground: #1F2937;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #EAB308;
+  --sidebar-foreground: #0F172A;
+  --sidebar-accent: #F8FAFC;
+  --sidebar-accent-foreground: #0066FF;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #0066FF;
 }
 
 .dark {
-  --primary: #EAB308;
-  --primary-foreground: #1F2937;
-  --sidebar-primary: #EAB308;
-  --sidebar-primary-foreground: #1F2937;
-  --background: #111827;
-  --foreground: #F9FAFB;
-  --card: #1F2937;
-  --card-foreground: #F9FAFB;
-  --popover: #1F2937;
-  --popover-foreground: #F9FAFB;
-  --secondary: #374151;
-  --secondary-foreground: #EAB308;
-  --muted: #1F2937;
-  --muted-foreground: #9CA3AF;
-  --accent: #EAB308;
-  --accent-foreground: #1F2937;
+  --primary: #3B82F6;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #3B82F6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: #1E293B;
+  --card-foreground: #F8FAFC;
+  --popover: #1E293B;
+  --popover-foreground: #F8FAFC;
+  --secondary: #1E293B;
+  --secondary-foreground: #3B82F6;
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: #3B82F6;
+  --accent-foreground: #FFFFFF;
   --destructive: #7F1D1D;
   --destructive-foreground: #FCA5A5;
-  --border: #374151;
-  --input: #374151;
-  --ring: #EAB308;
-  --sidebar: #1F2937;
-  --sidebar-foreground: #F9FAFB;
-  --sidebar-accent: #374151;
-  --sidebar-accent-foreground: #EAB308;
-  --sidebar-border: #374151;
-  --sidebar-ring: #EAB308;
+  --border: #334155;
+  --input: #334155;
+  --ring: #3B82F6;
+  --sidebar: #1E293B;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #3B82F6;
+  --sidebar-border: #334155;
+  --sidebar-ring: #3B82F6;
 }
 
 @layer base {
@@ -118,16 +118,17 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    @apply tracking-tight;
   }
   h1 {
-    @apply text-5xl font-bold text-primary;
+    @apply text-5xl md:text-6xl;
   }
   h2 {
-    @apply text-4xl font-bold text-primary;
+    @apply text-4xl text-slate-900;
   }
   h3 {
-    @apply text-2xl font-semibold text-primary;
+    @apply text-2xl text-slate-900;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -138,7 +139,11 @@
   select:not(:disabled),
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
+    @apply cursor-pointer transition-all duration-200;
+  }
+  
+  button:hover, a:hover {
+    @apply opacity-90;
   }
 }
 
@@ -147,27 +152,13 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
+      max-width: 1200px;
     }
   }
 }
