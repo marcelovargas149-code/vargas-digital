@@ -126,7 +126,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <div className="w-48 h-48 rounded-lg overflow-hidden mb-6 shadow-lg border-4 border-primary">
                 <img
-                  src="/manus-storage/team-member-profile_773d761c.png"
+                  src="/images/marcelo-vargas.png"
                   alt="Fundador - VARGAS DIGITAL"
                   className="w-full h-full object-cover"
                 />
