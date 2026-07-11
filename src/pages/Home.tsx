@@ -119,7 +119,7 @@ export default function Home() {
 
           <div className="flex justify-center">
             <div className="flex flex-col items-center text-center max-w-sm">
-              <div className="w-30 h-30 rounded-2xl overflow-hidden mb-8 shadow-2xl border-4 border-white"> {/* Reducido w-48 a w-40 */}
+              <div className="w-64 h-64 rounded-2xl overflow-hidden mb-8 shadow-2xl border-4 border-white"> {/* Reducido w-48 a w-40 */}
                 <img
                   src="/images/marcelo-vargas.png"
                   alt="Fundador - VARGAS DIGITAL"
